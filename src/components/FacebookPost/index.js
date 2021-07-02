@@ -1,10 +1,14 @@
 import './style.css';
 import FbImageLibrary from 'react-fb-image-grid';
+import { useState } from 'react';
 
 const FacebookPost = (props) => {
+  const [isLiked, setIsLiked] = useState(false);
+  const [dropCommentBox, setDropCommentBox] = useState(false);
   const {
     details: { avatar, createdBy, createdAt, description, images },
   } = props;
+
   return (
     <div className='facebook_post'>
       <div className='post_header'>
@@ -19,10 +23,22 @@ const FacebookPost = (props) => {
       </div>
       <FbImageLibrary images={images} />
       <div className='post_footer'>
-        <i class='fas fa-thumbs-up'></i>
-        <i class='fas fa-comment'></i>
-        <i class='fas fa-share'></i>
+        <i
+          className='fas fa-thumbs-up'
+          style={{ color: isLiked && '#4444ff' }}
+          onClick={() => setIsLiked(!isLiked)}
+        ></i>
+        <i
+          className='fas fa-comment'
+          onClick={() => setDropCommentBox(!dropCommentBox)}
+        ></i>
+        <i className='fas fa-share'></i>
       </div>
+      {dropCommentBox && (
+        <div>
+          <input type='text' />
+        </div>
+      )}
     </div>
   );
 };

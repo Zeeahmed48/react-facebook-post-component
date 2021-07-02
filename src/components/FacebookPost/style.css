@@ -3,7 +3,8 @@
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border-radius: 8px;
-  width: 95%;
+  box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.4);
+  width: 100%;
   max-width: 500px;
 }
 .post_header {
@@ -43,16 +44,21 @@
 }
 .post_footer {
   display: flex;
-  justify-content: space-around;
-  padding: 5px 0;
+  justify-content: space-between;
+  padding: 5px 15px;
   margin: 0 10px;
   border-top: 1px solid #ccc;
   font-size: 24px;
 }
-.post_footer .MuiSvgIcon-root {
+.post_footer i {
   color: #272727;
   font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
 }
+/* .post_footer i:hover {
+  transform: scale(1.2);
+} */
 .post_footer .MuiIconButton-root {
   padding: 9px;
 }
