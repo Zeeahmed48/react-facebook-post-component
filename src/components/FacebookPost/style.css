@@ -1,0 +1,57 @@
+.facebook_post {
+  margin: 0 auto;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  width: 95%;
+  max-width: 500px;
+}
+.post_header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.post_header_upper {
+  display: flex;
+  align-items: center;
+}
+.post_header_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post_header_info {
+  padding-left: 10px;
+}
+.post_header_name {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-size: medium;
+  color: #050505;
+  margin: 0;
+  padding-bottom: 5px;
+}
+.post_header_time {
+  font-size: small;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  color: gray;
+  margin: 0;
+}
+.post__title {
+  padding: 5px 0;
+}
+.post_footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+  margin: 0 10px;
+  border-top: 1px solid #ccc;
+  font-size: 24px;
+}
+.post_footer .MuiSvgIcon-root {
+  color: #272727;
+  font-size: 22px;
+}
+.post_footer .MuiIconButton-root {
+  padding: 9px;
+}
